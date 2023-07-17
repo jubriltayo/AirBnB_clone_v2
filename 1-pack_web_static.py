@@ -14,7 +14,7 @@ def do_pack():
                                                            dt.hour,
                                                            dt.minute,
                                                            dt.second)
-    # create directory `versions` if it doesnt existi
+    # create directory `versions` if it doesnt exist
     if os.path.isdir("versions") is False:
         # create directory on local machine without error if failed
         if local("mkdir -p versions").failed is True:
@@ -22,5 +22,4 @@ def do_pack():
     # create gzip file using `tar` command
     if local("tar -czvf {} web_static".format(a_file)).failed is True:
         return None
-
     return a_file
