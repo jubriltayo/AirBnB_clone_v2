@@ -8,11 +8,12 @@ app = Flask(__name__)
 # Disable strict slashes for the entire app
 app.url_map.strict_slashes = False
 
+
 @app.route('/')
 def display():
-	""" displays `Hello HBNB!` """
-	return "Hello HBNB!"
+    """ displays `Hello HBNB!` """
+    return "Hello HBNB!"
 
 
 if __name__ == "__main__":
-	app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000)
